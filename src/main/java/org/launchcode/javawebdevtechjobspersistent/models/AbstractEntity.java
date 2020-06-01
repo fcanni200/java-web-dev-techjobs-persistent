@@ -15,7 +15,7 @@ public abstract class AbstractEntity {
     private int id;
 
     @NotBlank(message = "Cannot leave blank.")
-    @Size(max = 75, message =  "Your name must be larger than 50 characters.")
+    @Size(min = 1, max = 75, message =  "Your name must be larger than 50 characters.")
     private String name;
 
     public int getId() {
@@ -46,5 +46,4 @@ public abstract class AbstractEntity {
     public int hashCode() {
         return Objects.hash(id);
     }
-
 }
